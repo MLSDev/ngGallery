@@ -142,7 +142,7 @@
                 }
 
                 scope.deleteImage = function (i) {
-                  console.log 'direcive delete'  
+                  console.log('direcive delete');  
                   // if (scope.images[i] == null) return
                   // var image = scope.images[i];
 
