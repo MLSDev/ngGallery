@@ -142,16 +142,17 @@
                 }
 
                 scope.deleteImage = function (i) {
-                  if (scope.images[i] == null) return
-                  var image = scope.images[i];
+                  console.log 'direcive delete'  
+                  // if (scope.images[i] == null) return
+                  // var image = scope.images[i];
 
-                  if (confirm('Are you sure you want to delete ' + (image.name || 'this image') + '?')) {
-                    scope.onDelete({ image: image }); // onDelete callback
-                    if (scope.images.splice(i, 1)) {
-                      if (scope.images.length == 0) return scope.closeGallery()
-                      scope.changeImage((scope.images.length - 1));
-                    }
-                  }
+                  // if (confirm('Are you sure you want to delete ' + (image.name || 'this image') + '?')) {
+                  //   scope.onDelete({ image: image }); // onDelete callback
+                  //   if (scope.images.splice(i, 1)) {
+                  //     if (scope.images.length == 0) return scope.closeGallery()
+                  //     scope.changeImage((scope.images.length - 1));
+                  //   }
+                  // }
                 }
 
                 scope.changeImage = function (i) {
