@@ -43,6 +43,7 @@
             '    <a class="close-popup" ng-click="closeGallery()"><i class="fa fa-close"></i></a>' +
             '    <a href="{{getImageDownloadSrc()}}" target="_blank" ng-show="showImageDownloadButton()" class="download-image"><i class="fa fa-download"></i></a>' +
             '    <a ng-click="deleteImage(index)" ng-show="showDeleteIcons()" class="delete-image"><i class="fa fa-trash"></i></a>' +
+            '    <a ng-click="statusImage(images[index])" ng-show="showDeleteIcons()" class="delete-image" ng-class="{\'user-not-banned\': images[index].status != \'active\'}"><i class="fa fa-flag"></i></a>' +
             '  </div>' +
             '  <a class="nav-left" ng-click="prevImage()"><i class="fa fa-angle-left"></i></a>' +
             '  <img ondragstart="return false;" draggable="false" ng-src="{{ img }}" ng-click="nextImage()" ng-show="!loading" class="effect" />' +
@@ -66,6 +67,7 @@
                 hideOverflow: '=',
                 deleteIcons: '@',
                 onDelete: '&' // on delete callback
+                onPutStatus: '&' // on put status image callback
             },
             controller: [
                 '$scope',
@@ -156,6 +158,11 @@
                   //     scope.changeImage((scope.images.length - 1));
                   //   }
                   // }
+                }
+
+                scope.statusImage = function (image) {
+                  scope.onPutStatus({ image: image });
+                  scope.closeGallery();    
                 }
 
                 scope.changeImage = function (i) {
