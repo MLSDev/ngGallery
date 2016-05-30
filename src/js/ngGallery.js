@@ -66,7 +66,7 @@
                 thumbsNum: '@',
                 hideOverflow: '=',
                 deleteIcons: '@',
-                onDelete: '&' // on delete callback
+                onDelete: '&', // on delete callback
                 onPutStatus: '&' // on put status image callback
             },
             controller: [
