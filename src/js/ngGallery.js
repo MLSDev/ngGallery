@@ -162,7 +162,7 @@
 
                 scope.statusImage = function (image) {
                   scope.onPutStatus({ image: image });
-                  scope.closeGallery();    
+                  // scope.closeGallery();    
                 }
 
                 scope.changeImage = function (i) {
