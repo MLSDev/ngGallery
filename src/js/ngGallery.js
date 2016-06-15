@@ -44,10 +44,9 @@
             '    <a href="{{getImageDownloadSrc()}}" target="_blank" ng-show="showImageDownloadButton()" class="download-image"><i class="fa fa-download"></i></a>' +
             '    <a ng-click="deleteImage(index)" ng-show="showDeleteIcons()" class="delete-image"><i class="fa fa-trash"></i></a>' +
             '    <a ng-click="statusImage(images[index])" ng-show="showDeleteIcons()" class="delete-image" ng-class="{\'user-not-banned\': images[index].status != \'active\'}"><i class="fa fa-flag"></i></a>' +
-
-            '    <a class="delete-image"><i class="fa fa-thumbs-o-up"></i> {{images[index].other.wow_count}}</a>' +
-            '    <a class="delete-image"><i class="fa fa-hand-peace-o"></i> {{images[index].other.so_so_count}}</a>' +
-            '    <a class="delete-image" href="pictures/{{images[index].id}}/comments"><i class="fa fa-commenting-o"></i></a>' +
+            '    <a class="delete-image"><i class="fa fa-thumbs-o-up"></i> {{images[index].other.so_so_count}}</a>' +
+            '    <a class="delete-image"><i class="fa fa-heart-o"></i> {{images[index].other.wow_count}}</a>' +
+            '    <a class="delete-image" href="pictures/{{images[index].id}}/comments"><i class="fa fa-commenting-o"></i> {{images[index].other.comment_count}}</a>' +
 
             '  </div>' +
             '  <a class="nav-left" ng-click="prevImage()"><i class="fa fa-angle-left"></i></a>' +
